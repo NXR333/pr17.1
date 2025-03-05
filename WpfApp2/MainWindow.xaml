@@ -1,0 +1,32 @@
+﻿<Window x:Class="WpfApp2.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp2"
+        mc:Ignorable="d"
+        Title="среднее геометрическое" Height="450" Width="800" ResizeMode="NoResize">
+    <DockPanel>
+        <Menu DockPanel.Dock="Top">
+            <MenuItem Header="Выход" Click="ExitBtn"/>
+            <MenuItem Header="О программе">
+                <MenuItem Header="Разработчик" Click="AboutDevBtn"/>
+                <MenuItem Header="Задача №1" Click="AboutExBtn"/>
+            </MenuItem>
+        </Menu>
+        <Grid>
+            <Label Content="Значение A" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="100,60,0,0" />
+            <Label Content="Значение B" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="100,120,0,0"/>
+            <Label Content="Ответ" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="250,120,0,0"/>
+
+            <TextBox x:Name="ZnA" TextWrapping="Wrap" Width="120" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="100,90,0,0" MaxLength="9"/>
+            <TextBox x:Name="ZnB" TextWrapping="Wrap" Width="120" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="100,150,0,0" MaxLength="9"/>
+            <TextBox x:Name="Rez" TextWrapping="Wrap" Width="120" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="250,150,0,0" MaxLength="9" IsReadOnly="True" />
+
+
+            <Button Content="Рассчитать" Width="115" Height="20" Margin="250,89,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Click="CalculateBtn"/>
+
+
+        </Grid>
+    </DockPanel>
+</Window>
